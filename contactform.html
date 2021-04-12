@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/html5reset.css">
+	<link rel="stylesheet" href="css/style.css">
+    <link rel="site icon" type="image/png" href="imgs/email.png"/>
+	<title>Contact</title>
+</head>
+<body class="body-back">
+	<a class = "skip" href="#main">Skip to Main Content</a>
+
+	<header>
+		<nav>
+			<ul class="nav_links">
+				<li><a href = "index.html">About Me</a></li>
+                <li><a href="home.html">Home</a></li>
+				<li><a href = "Bolivia.html">Travel to Bolivia</a></li>
+				<li><a href = "Ghana.html">Travels to Ghana</a></li>
+                <li><a id="active" href ="contactform.html">Contact</a></li>
+			</ul>
+		</nav>
+
+	    </header>
+
+<main>
+    <h1>Contact Me</h1>
+        <div id="contact-me"></div>
+        <div class="contact-main"></div>
+            <h2>Leave me a Note, I will get back in touch with you.</h2>
+            <div class="contact-img">
+            <img id="last_pic" src="imgs/con.JPG" alt="Lastpic">
+            </div>
+            <p>Once I receive your note, expect a response in 3 business days.Or add me on linkedin.</p>
+		<div>
+        <form action="https://formspree.io/f/mqkwkkak" method="POST">
+            <fieldset id="skip">
+                <div class="contact">
+                    <label for="fullname">Name:</label>
+                    <input type="text" id="firstname" name="fullname" required>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+    
+                    <input type="submit" value="Send">
+                </div>
+            </fieldset>
+        </form>    
+</main>
+
+	    <footer>
+            <p>Samuel Osei Afriyie &copy; 2021, <a href="https://www.linkedin.com/in/samuel-osei-afriyie-b1543257">LinkedIn </a></p>
+	</footer>
+</body>
+</html>

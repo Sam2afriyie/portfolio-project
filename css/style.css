@@ -1,6 +1,22 @@
-/*Add padding and margin to space out the page.
-Make the font larger too.*/
+/* For mobile phones: */
+[class*="col-"] {
+	width: 100%;
+  }
+/* Tablet view */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  
+	html{
+		scroll-behavior: smooth;
+	}
+	body, .nav_links #active{
+		font-size: 20px;
+		background-color: none;
+	}
+  }
+
+/* Main Body */
 body{
+	background-color: rgb(248, 248, 248);
 	margin:1%;
 	padding:1%;
 	font-size:150%;
@@ -15,12 +31,59 @@ h1{
 
 /*Style the images*/
 img{
-    height: 200px;
-    width:auto;
-    border: 3px solid blue;
+    height: 500px;
+    width: auto;
+	position: center; 
     padding: 25px;
     border-radius: 10px;
     margin: 10px;
+}
+
+#homepage_img {
+	display:block;
+	margin-left:auto;
+	margin-right: auto;
+	width: 50%;
+	position: sticky;
+	top: 0; 
+	background-image: url("../imgs/FIR.JPG");
+	min-height: 500px; 
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+#last_pic {display:block;
+margin-left:auto;
+margin-right: auto;
+width: 50%;
+position: sticky;
+top: 0; 
+background-image: url("../imgs/con.JPG");
+min-height: 500px; 
+background-attachment: fixed;
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+}
+
+
+/* Image Animation */
+.img :hover{
+	color: rgb(211, 232, 250);
+	-webkit-transform: scaleX(-1);
+	transform: scaleX(-1);
+}
+
+/* Links */
+
+a:visited {
+	color: red;
+}
+
+a:hover {
+	text-decoration: underline;
 }
 
 /*Make the h2 heading match h1*/
@@ -29,23 +92,48 @@ h2{
 	font-weight: bold;
 }
 
-/*Improve the spacing for paragraphs AND headings*/
+/*Style headers and paragraphs*/
+
 p, h1, h2 {
+	text-align: center;
     padding: 10px;
+	font-size: 25px;
 }
 
-/*Add borders around the main components and some
-space too*/
+h1{
+	text-shadow: 3px 3px 1px #ffffff;
+}
+
 header, nav, main, h1, footer{
 	border: 2px solid grey;
 	margin: 10px 0;
 }
 
+header{
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: space-evenly;
+}
+nav{
+	text-align: center;
+	padding: 10px;
+	width: 100%;
+	background-color: #000000;
+}
 
-/*Change the styling for all of the list 
-items in the nav section*/
+nav a{
+	color: #ffe0e0;
+	text-decoration: darkgray;
+}
+
+nav a:hover{
+	font-weight: bold;
+	color: #c7c3c3;
+}
+
 nav li{
-	background-color: #ECFF4D;
+	background-color: #4df3ff;
 	padding:10px;
 	width:25%;
 	border:1px solid black;
@@ -53,10 +141,33 @@ nav li{
 	width: 20%;
 }
 
+.nav_links #active {
+	font-weight: bolder;
+	color: #fdfdfd;
+	text-decoration: double;
+	border: 4px rgb(36, 36, 36);
+} 
+
 
 
 /*Added this so the links stay the same color*/
-a:visited{color:#0000FF}
+a:visited{
+	color:#0000FF
+}
 
+/* Footer */
+footer{
+	position: fixed-bottom;
+	width: 100%;
+	background-color: #effaf82d;
+}
 
+footer p{
+	color: rgb(0, 0, 0);
+	text-align: center;
+}
 
+footer a{
+	color: #000000c7;
+	text-decoration: none;
+}
