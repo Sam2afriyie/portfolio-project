@@ -42,16 +42,21 @@
             <div class="contact-img">
             <img id="last_pic" src="imgs/con.JPG" alt="Lastpic">
             </div>
-            <p>Once I receive your note, expect a response in 3 business days.Or add me on linkedin.</p>
+            <p>Once I receive your note, please expect a response in 3 business days.Or add me on linkedin.</p>
 		<div>
-        <form action="https://formspree.io/f/mqkwkkak" method="POST">
+        <form action="https://formspree.io/f/mqkwkkak" method="POST" class="form1">
             <fieldset id="skip">
                 <div class="contact">
-                    <label for="fullname">Name:</label>
-                    <input type="text" id="firstname" name="fullname" required>
-                    <label for="email">Email:</label>
+                    <label for="Firstname">First Name:</label>
+                    <input type="text" id="firstname" name="fname" required>
+                    <label for="Lastname">Last Name:</label>
+                    <input type="text" id="lastname" name="lname" required>
+                    <label for="Email">Email:</label>
                     <input type="email" id="email" name="email" required>
-    
+                    <br><br>
+                    <label for="Message">Message:</label>
+                    <textarea id="message" name="Message" rows="4" cols="50">
+                    </textarea>
                     <input type="submit" value="Send">
                 </div>
             </fieldset>

@@ -1,16 +1,21 @@
 /* For mobile phones: */
-@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+@media screen and (min-device-width : 400px) {
+	html {
+		scroll-behavior: smooth;
+}
 
 /* Main Body */
 body, #about-back, #home-page, #ghana-back, #bolivia-back, #contact-back  {
 	font-size: 10px;
+	color: #2e2e2e;
 	position:relative;
+	text-align: justify;
 	font-family: Arial, Helvetica, sans-serif;
 	background: #b3efff;
 }
 
 
-/*Make the h1 heading bigger with a bold font*/
+/*Make the h1 utilize flex*/
 
 header{
 	display: flex;
@@ -26,7 +31,6 @@ nav{
 	background-color: #046b99;
 }
 
-
 nav a{
 	color: #ffe0e0;
 	text-decoration: darkgray;
@@ -39,19 +43,49 @@ nav a:hover{
 
 nav li{
 	background: color #5b615b;;
-	padding:10px;
+	padding: 2px 2px 2px 2px 2px; 
 	width:25%;
 	border:1px solid #ffffff;
 	display: inline-block;
 	width: 20%;
 }
 
+.nav_links {
+	margin: 0;
+	padding: 0;
+	display: flex;
+	flex: column;
+	align-items: center;
+	justify-content: space-between;
+}
+
 .nav_links #active {
 	font-weight: bolder;
 	color: #fdfdfd;
 	text-decoration: double;
-	border: 4px rgb(36, 36, 36);
+	border: 3px solid white;
 } 
+
+ul {
+	display: grid;
+	grid-template-columns: 2fr 1fr 1fr 1fr 2r;
+	grid-gap: 10px;
+	justify-content: space-around;
+	justify-items: center;
+}
+
+.skip {
+	background: white;
+	left: 0;
+	padding: 7px;
+	-webkit-transition: top 1s ease-out;
+	transition: top 1s ease-out;
+	z-index: 1;
+}
+
+.skip a:foucus {
+	background: 
+}
 
 h1{
 	font-size: 2em; 
@@ -68,6 +102,68 @@ img{
     margin: 10px;
 }
 
+.ghcontainer{
+	position: relative;
+	width: 50%;
+}
+
+.imgh {
+	display: block;
+	width: 100%;
+	height: auto;
+}
+
+.ghcontainer {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	padding: 0 4px;
+}
+
+.olay {
+	position: absolute;
+    bottom: 100%;
+    left: 0;
+    right: 0;
+    background-color: #e9a2e3;
+    overflow: hidden;
+    width: 100%;
+    height: 0;
+    transition: .5s ease;
+}
+
+.ghcontainer:hover .olay{
+	bottom: 0;
+	height: 100%;
+}
+
+.txt{
+	white-space: nowrap;
+	color: white;
+	font-size: 20px;
+	position: absolute;
+	overflow: hidden;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+}
+
+.b-img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.b-img {
+	display:grid;
+	grid-row-gap: 3px;
+	grid-template-columns: 1fr;
+	grid-template-rows: 1fr, auto auto auto auto auto auto;
+	justify-content: center;
+	align-items: center;
+}
+
 #homepage_img {
 	display:block;
 	margin-left:auto;
@@ -82,6 +178,8 @@ img{
 	background-repeat: no-repeat;
 	background-size: cover;
 }
+
+
 
 #last_pic {display:block;
 margin-left:auto;
@@ -135,9 +233,7 @@ p {
 	padding: 20px;
 }
 
-main {
 
-}
 /*Added this so the links stay the same color*/
 a:visited{
 	color:#ffffff
@@ -200,6 +296,13 @@ nav{
 	background-color: #046b99;
 }
 
+ul {
+	display: grid;
+	grid-template-columns: 5, auto;
+	grid-gap: 10px;
+	justify-content: left;
+	justify-items: left;
+}
 
 nav a{
 	color: #ffe0e0;
@@ -367,7 +470,7 @@ nav{
 
 
 nav a{
-	color: #ffe0e0;
+	color: #ffffff;
 	text-decoration: darkgray;
 }
 
@@ -390,7 +493,16 @@ nav li{
 	color: #fdfdfd;
 	text-decoration: double;
 	border: 4px rgb(36, 36, 36);
+	border-radius: auto;
 } 
+
+ul {
+	display: grid;
+	grid-template-columns: 5, 100px;
+	grid-gap: 10px;
+	justify-content: left;
+	justify-items: left;
+}
 
 h1{
 	font-size: 2em; 
@@ -499,4 +611,20 @@ footer a{
 	color: #000000c7;
 	text-decoration: none;
 }
+@media screen and (prefers-reduced-motion: reduce){
+	html{
+		scroll-behavior: auto; /* Removes scroll animation */
+	}
+  
+	.skip a{
+	  -webkit-transition: none; /* sets to default setting */
+	  transition: none;        /* sets to default setting */
+	 }
+  
+	/*Turn off parallax*/
+	header{
+	  background-attachment: initial;
+	}
+  }
+  
 }
